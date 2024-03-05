@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->string('nom', 50);
+            $table->json('taille')->nullable();
+            $table->decimal('prix', 6, 2);
             $table->timestamps();
         });
     }

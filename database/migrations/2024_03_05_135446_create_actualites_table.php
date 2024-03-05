@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('actualites', function (Blueprint $table) {
             $table->id();
+            $table->string('titre', 255);
+            $table->text('content');
+            $table->string('auteur', 50);
+            $table->string('photo');
+            $table->foreignId(column: 'equipe_jeune_id')->constrained(table: 'equipe_jeunes')->nullable();
+            $table->foreignId(column: 'equipe_senior_id')->constrained(table: 'equipe_seniors')->nullable();
             $table->timestamps();
         });
     }

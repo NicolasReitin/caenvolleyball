@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
+            $table->string('equipe', 50);
+            $table->string('responsable_equipe', 50);
+            $table->decimal('total', 6, 2);
+            $table->foreignId(column: 'client_id')->constrained(table: 'clients')->nullable();
             $table->timestamps();
         });
     }

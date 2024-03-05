@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('equipe_jeunes_joueurs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId(column: 'joueur_id')->constrained(table: 'joueurs')->nullable();
+            $table->foreignId(column: 'equipe_jeune_id')->constrained(table: 'equipe_jeunes')->nullable();
             $table->timestamps();
         });
     }

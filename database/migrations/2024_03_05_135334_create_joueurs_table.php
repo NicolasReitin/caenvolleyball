@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('joueurs', function (Blueprint $table) {
             $table->id();
+            $table->int('licence', 15);
+            $table->enum('genre',['M', 'F']);
+            $table->string('nom', 50);
+            $table->string('prenom', 50);
+            $table->date('date_de_naissance');
+            $table->string('email', 50);
+            $table->string('tel', 15)->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

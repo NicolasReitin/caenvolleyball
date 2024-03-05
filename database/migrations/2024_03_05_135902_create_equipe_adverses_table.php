@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('equipe_adverses', function (Blueprint $table) {
             $table->id();
+            $table->string('ville', 50);
+            $table->string('nom', 50);
+            $table->string('logo');
             $table->timestamps();
         });
     }

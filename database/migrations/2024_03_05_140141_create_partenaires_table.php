@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('partenaires', function (Blueprint $table) {
             $table->id();
+            $table->string('nom', 50);
+            $table->string('url', 255);
+            $table->string('logo');
+            $table->enum('role', ['Partenaires institutionnels', 'Partenaires privés', 'Nous ont aidés']);
             $table->timestamps();
         });
     }
