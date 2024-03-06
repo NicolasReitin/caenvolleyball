@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('resultats', function (Blueprint $table) {
             $table->id();
-            $table->smallInteger('set_domicile', 1);
-            $table->smallInteger('score_domicile', 2);
-            $table->smallInteger('set_exterieur', 1);
-            $table->smallInteger('score_exterieur', 2);
+            $table->smallInteger('set_domicile');
+            $table->smallInteger('score_domicile');
+            $table->smallInteger('set_exterieur');
+            $table->smallInteger('score_exterieur');
             $table->foreignId(column: 'equipe_jeune_id')->constrained(table: 'equipe_jeunes')->nullable();
             $table->foreignId(column: 'equipe_senior_id')->constrained(table: 'equipe_seniors')->nullable();
             $table->foreignId(column: 'equipe_adversaire_id')->constrained(table: 'equipe_seniors')->nullable();

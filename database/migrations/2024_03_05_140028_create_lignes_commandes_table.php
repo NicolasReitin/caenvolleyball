@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('lignes_commandes', function (Blueprint $table) {
             $table->id();
-            $table->smallInteger('quantite', 3);
-            $table->smallInteger('numero', 3);
+            $table->smallInteger('quantite');
+            $table->smallInteger('numero');
             $table->string('initiales', 3);
             $table->decimal('sous_total', 6, 2);
             $table->foreignId(column: 'commande_id')->constrained(table: 'commandes')->nullable();

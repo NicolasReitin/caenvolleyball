@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('joueurs', function (Blueprint $table) {
             $table->id();
-            $table->int('licence', 15);
+            $table->integer('licence');
             $table->enum('genre',['M', 'F']);
             $table->string('nom', 50);
             $table->string('prenom', 50);
