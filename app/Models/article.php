@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class article extends Model
+class Article extends Model
 {
     use HasFactory;
+
+    // 1-n avec lignes_commandes
 }

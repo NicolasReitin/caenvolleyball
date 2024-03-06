@@ -5,7 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class resultat extends Model
+class Resultat extends Model
 {
     use HasFactory;
+
+    //1-n avec equipe_seniors
+
+    //1-n avec equipe_jeunes
 }

@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class staff extends Model
+class Staff extends Model
 {
     use HasFactory;
+
+    //1-n avec users
 }
