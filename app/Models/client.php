@@ -10,4 +10,7 @@ class Client extends Model
     use HasFactory;
 
     //1-n avec commandes
+    public function commandes() { // association N/N avec table article_tag
+        return $this->hasMany(Commande::class);
+    }
 }

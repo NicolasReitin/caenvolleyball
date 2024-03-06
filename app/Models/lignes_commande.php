@@ -10,6 +10,12 @@ class Lignes_commande extends Model
     use HasFactory;
 
     //1-n avec articles
+    public function article() { // association N/N avec table article_tag
+        return $this->belongsTo(Article::class);
+    }
 
     //1-n avec commandes
+    public function commande() { // association N/N avec table article_tag
+        return $this->belongsTo(Commande::class);
+    }
 }

@@ -10,4 +10,7 @@ class Equipe_adverse extends Model
     use HasFactory;
 
     //1-n avec resultats
+    public function resultats() { // association N/N avec table article_tag
+        return $this->hasMany(Resultat::class);
+    }
 }
