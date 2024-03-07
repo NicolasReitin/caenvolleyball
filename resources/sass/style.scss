@@ -5,6 +5,7 @@ $bleuCVB: #293378;
 body{
     background-color: #ffffff;
 }
+// _______________________Navbar___________________
 .introBar{
     background: linear-gradient(to left, $rougeCVB 0%, $bleuCVB 100%);
     p{
@@ -34,10 +35,7 @@ body{
     }
     .MenuNavbar{
         display: flex;
-        gap: 20px
-    }
-    .itemMenu{
-        white-space: nowrap;
+        gap: 20px;
         li {
             display: inline-block;
             margin: 0;
@@ -66,6 +64,11 @@ body{
             margin-left: 8px;
         }   
     }
+    .itemMenu{
+        white-space: nowrap;
+    }
+
+    
 }
 .logoClub{
     // position: absolute;
@@ -74,3 +77,36 @@ body{
     width: 100px;
     min-width: 100px;
 }
+
+// _______________________Dropdown menu___________________
+
+.dropdown-item {
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    ul{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: black;
+        font-weight: 500;
+        border-radius: 5px;
+        border-top: 5px solid $jauneCVB;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        background: white;
+        h3{
+            color: $jauneCVB;
+        }
+    }
+  }
+  .dropdown-item:hover .dropdown-content{
+    display: flex;
+  }
+  
