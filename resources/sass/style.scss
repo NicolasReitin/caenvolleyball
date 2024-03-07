@@ -1,0 +1,76 @@
+$jauneCVB: #e9a347;
+$rougeCVB: #b91a16;
+$bleuCVB: #293378;
+
+body{
+    background-color: #ffffff;
+}
+.introBar{
+    background: linear-gradient(to left, $rougeCVB 0%, $bleuCVB 100%);
+    p{
+        margin-left: 20%;
+        font-size: 18px;
+    }
+    div{
+        margin-right:20%;
+    }
+    img{
+        width: 25px;
+        transition: transform 0.3s ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+.navbar{
+    position: relative;
+    height: 90px;
+    border-bottom: solid 1px $bleuCVB;
+    // background: linear-gradient(to top, #b91a16 0%, #293378 100%);
+    background-color: #ffffff;
+
+    .navbar-content{
+        margin: 10px 10%;
+    }
+    .MenuNavbar{
+        display: flex;
+        gap: 20px
+    }
+    .itemMenu{
+        white-space: nowrap;
+        li {
+            display: inline-block;
+            margin: 0;
+            text-decoration: none;
+            position: relative;
+        }
+        li::before{
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $jauneCVB;
+            transition: width 0.4s ease-in-out, transform 0.4s ease-in-out;
+            transform-origin: left;
+        }
+        li:hover::before {
+            width: 100%;
+            left: 0;
+        }  
+        img{
+            width: 15px;
+            min-width: 15px;
+            margin-top: 6px;
+            margin-left: 8px;
+        }   
+    }
+}
+.logoClub{
+    // position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 100px;
+    min-width: 100px;
+}
