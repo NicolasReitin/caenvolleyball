@@ -1,11 +1,14 @@
-$jauneCVB: #e9a347;
+$jauneCVB: #dfbe2c;
 $rougeCVB: #b91a16;
 $bleuCVB: #293378;
 
 body{
     background-color: #ffffff;
 }
-// _______________________Navbar___________________
+//________________________________________________________________
+// _____________________________ Navbar ____________________________
+//________________________________________________________________
+
 .introBar{
     background: linear-gradient(to left, $rougeCVB 0%, $bleuCVB 100%);
     p{
@@ -37,6 +40,8 @@ body{
         display: flex;
         gap: 20px;
         li {
+            font-weight: 500;
+            color: $bleuCVB;
             display: inline-block;
             margin: 0;
             text-decoration: none;
@@ -67,8 +72,6 @@ body{
     .itemMenu{
         white-space: nowrap;
     }
-
-    
 }
 .logoClub{
     // position: absolute;
@@ -98,7 +101,7 @@ body{
         font-weight: 500;
         border-radius: 5px;
         border-top: 5px solid $jauneCVB;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
         padding: 20px;
         background: white;
         h3{
@@ -109,4 +112,86 @@ body{
   .dropdown-item:hover .dropdown-content{
     display: flex;
   }
-  
+
+//________________________________________________________________
+// _____________________________ Scores ____________________________
+//________________________________________________________________
+  .scores{
+    margin: 20px auto;
+    width: 60%;
+    height: 150px;
+    background: rgba(0, 119, 255, 0.39);
+  }
+
+//________________________________________________________________
+// _____________________________ Atualités ____________________________
+//________________________________________________________________
+.actualites{
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+    height: 450px;
+    h2{
+        font-size: 32px;
+        color: $bleuCVB;
+        font-weight: 900;
+    }
+
+    .first-actu{
+        margin: 20px auto;
+        width: 60%;
+        height: 380px;
+        max-height: 20%;
+        background: rgb(255, 255, 255);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        h5{
+            color: $bleuCVB;
+            font-size: 18px;
+        }
+        p{
+            color: $jauneCVB;
+        }
+        img{
+            padding: 2px;
+            border-bottom: solid 1px rgba(0, 0, 0, 0.199);
+            width: 100%;
+            max-height: 300px;
+        }
+    }
+    .others-actu{
+        position: relative;
+        width: 50%;
+        .block-others-actus{
+            padding: 12px;
+            width: auto;
+            background: rgb(255, 255, 255);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            h5{
+                color: $bleuCVB;
+                font-size: 18px;
+                font-weight: 900;
+            }
+            p{
+                color: $jauneCVB;
+            }
+        }
+        .all-actus{
+            position: absolute;
+            bottom: 10px;
+            right: -10px;
+            padding: 5px;
+            background: $jauneCVB;
+            font-size: 18px;
+            font-weight: 900;
+            color: white;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+//________________________________________________________________
+// _____________________________ Réseaux sociaux ____________________________
+//________________________________________________________________
+
