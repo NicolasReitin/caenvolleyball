@@ -1,13 +1,14 @@
 import Actualites from '@/Components/Actualites'
 import Reseaux from '@/Components/Reseaux'
 import Scores from '@/Components/Scores'
-import Navbar from '@/Layouts/Navbar'
+import Footer from '@/Layouts/Footer'
+import Header from '@/Layouts/Header'
 import React from 'react'
 
 export default function Welcome() {
   return (
     <>
-        <Navbar />
+        <Header />
 
         <Scores />
 
@@ -15,7 +16,7 @@ export default function Welcome() {
 
         <Reseaux />
 
-
+        <Footer />
 
     </>
   )

@@ -20,6 +20,12 @@
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
+        {{-- Plugin Page facebook --}}
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v19.0" nonce="YmNKrnMQ">
+        </script>
+        {{-- Plugin Page Instagram --}}
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
         @inertia
     </body>
 </html>
