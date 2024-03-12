@@ -3,6 +3,10 @@ $rougeCVB: #b91a16;
 $bleuCVB: #183972;
 $fontTitle: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
 
+html, body{
+    margin: 0;
+    padding: 0;
+}
 body{
     background-color: #ffffff;
 }
@@ -30,8 +34,7 @@ body{
 .navbar{
     position: relative;
     height: 90px;
-    border-bottom: solid 1px $bleuCVB;
-    // background: linear-gradient(to top, #b91a16 0%, #293378 100%);
+    // border-bottom: solid 1px $bleuCVB;
     background-color: #ffffff;
 
     .navbar-content{
@@ -113,6 +116,19 @@ body{
   .dropdown-item:hover .dropdown-content{
     display: flex;
   }
+
+//________________________________________________________________
+// _____________________________ Photo intro ____________________________
+//________________________________________________________________
+
+.main-photo-cover{
+    background-size: cover;
+    img{
+        width: 100%;
+        height: 55vh;
+        object-fit: cover;
+    }
+}
 
 //________________________________________________________________
 // _____________________________ Scores ____________________________
