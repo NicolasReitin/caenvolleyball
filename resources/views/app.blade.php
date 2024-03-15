@@ -20,12 +20,17 @@
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
+        
+        {{-- Plugin Score N'co --}}
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script><script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script> -->
+    
         {{-- Plugin Page facebook --}}
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v19.0" nonce="YmNKrnMQ">
         </script>
         {{-- Plugin Page Instagram --}}
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script><script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script>
         @inertia
     </body>
 </html>

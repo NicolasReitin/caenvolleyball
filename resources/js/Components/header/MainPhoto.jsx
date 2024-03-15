@@ -4,8 +4,9 @@ export default function MainPhoto() {
   return (
     <>
         <div className='main-photo-cover'>
-            <img src="/assets/images/cover.jpg" alt="" />
+            <img src="/assets/images/cover.jpg" alt="Caen Volley Ball Photo" />
         </div>
+        
     </>
   )
 }
