@@ -1,5 +1,6 @@
 import { Link } from '@inertiajs/react'
 import React from 'react'
+import ButtonGold from './ButtonGold'
 
 export default function Actualites() {
   return (
@@ -48,11 +49,12 @@ export default function Actualites() {
                         <h3 className='ml-3 mt-2'><strong>Titre de l'article</strong></h3>
                     </Link>
                 </div>
-              <div className='all-actus'>
-                <Link href='#'>
-                  <p>TOUTES LES ACTUS</p>
-                </Link>
-              </div>
+              <ButtonGold
+                href = '#'
+                classNameButton = 'all-actus' 
+                content = 'TOUTES LES ACTUS'
+              />
+              
             </div>
           </div>
         </div>

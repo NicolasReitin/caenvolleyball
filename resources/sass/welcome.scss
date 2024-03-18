@@ -121,18 +121,20 @@
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
             }
         }
-        .all-actus{
+        .all-actus {
             position: absolute;
-            bottom: -30px;
-            right: -10px;
-            padding: 5px;
-            background: $jauneCVB;
-            font-size: 18px;
-            font-weight: 900;
-            color: white;
-            border-radius: 5px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
+            // Utilisation de map-get() pour récupérer les valeurs de $buttonGold
+            bottom: map-get($buttonGold, bottom);
+            right: map-get($buttonGold, right);
+            padding: map-get($buttonGold, padding);
+            background: map-get($buttonGold, background);
+            font-size: map-get($buttonGold, font-size);
+            font-weight: map-get($buttonGold, font-weight);
+            color: map-get($buttonGold, color);
+            border-radius: map-get($buttonGold, border-radius);
+            box-shadow: map-get($buttonGold, box-shadow);
+            transition: map-get($buttonGold, transition);
+        
             &:hover{
                 transform: scale(1.02);
                 box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -180,5 +182,24 @@
         width: 100%; /* Largeur de la barre égale à la largeur du titre */
         height: 4px;
         background: $rougeCVB;
+    }
+    img{
+        width: 100px;
+    }
+    .button-post{
+        bottom: map-get($buttonGold, bottom);
+        right: map-get($buttonGold, right);
+        padding: map-get($buttonGold, padding);
+        background: map-get($buttonGold, background);
+        font-size: map-get($buttonGold, font-size);
+        font-weight: map-get($buttonGold, font-weight);
+        color: map-get($buttonGold, color);
+        border-radius: map-get($buttonGold, border-radius);
+        box-shadow: map-get($buttonGold, box-shadow);
+        transition: map-get($buttonGold, transition);
+        &:hover{
+            transform: scale(1.02);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
     }
 }
