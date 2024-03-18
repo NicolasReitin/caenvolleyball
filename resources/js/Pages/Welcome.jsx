@@ -1,3 +1,5 @@
+import '../../sass/welcome.scss'  
+
 import Actualites from '@/Components/Actualites'
 import Reseaux from '@/Components/Reseaux'
 import Scores from '@/Components/Scores'
