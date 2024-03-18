@@ -14,7 +14,7 @@ class ActualiteController extends Controller
      */
     public function index()
     {
-        $actualites = Actualite::all();
+        $actualites = Actualite::latest()->get();
         return Inertia::render('Actualites/index', ['actualites' => $actualites]);
         
     }

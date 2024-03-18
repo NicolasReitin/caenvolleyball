@@ -8,7 +8,7 @@ export default function MenuNavbar({ auth }) {
       <div>
         <ul className='MenuNavbar mt-6'>
           <li>
-            <Link href="#" className='itemMenu'>
+            <Link href={route('welcome')} className='itemMenu'>
               <span>Accueil</span>
             </Link>
           </li>
