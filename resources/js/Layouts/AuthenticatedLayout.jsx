@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Dropdown from '@/Components/Dropdown';
-import NavLink from '@/Components/NavLink';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
+import Dropdown from '@/Components/Trash/Dropdown';
+import NavLink from '@/Components/Trash/NavLink';
+import ResponsiveNavLink from '@/Components/Trash/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 
 export default function Authenticated({ user, header, children }) {

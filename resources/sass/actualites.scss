@@ -1,0 +1,12 @@
+@import 'style.scss';
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    }
+    
+    .div1 { grid-area: 2 / 2 / 5 / 5; }
+    

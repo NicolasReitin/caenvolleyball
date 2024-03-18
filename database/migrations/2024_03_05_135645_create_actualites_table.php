@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('content');
             $table->string('auteur', 50);
             $table->string('photo');
-            $table->foreignId(column: 'equipe_jeune_id')->constrained(table: 'equipe_jeunes')->nullable();
-            $table->foreignId(column: 'equipe_senior_id')->constrained(table: 'equipe_seniors')->nullable();
+            $table->foreignId(column: 'equipe_jeune_id')->nullable()->constrained(table: 'equipe_jeunes');
+            $table->foreignId(column: 'equipe_senior_id')->nullable()->constrained(table: 'equipe_seniors');
             $table->timestamps();
         });
     }

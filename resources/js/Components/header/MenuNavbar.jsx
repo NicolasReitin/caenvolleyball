@@ -13,9 +13,10 @@ export default function MenuNavbar({ auth }) {
             </Link>
           </li>
           <li className='dropdown-item'>
-            <Link href="#" className='itemMenu'>
               <div className='flex'>
-                <span>Le Club</span>
+                <Link href="#" className='itemMenu'>
+                  <span>Le Club</span>
+                </Link>
                 <div >
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
@@ -30,12 +31,12 @@ export default function MenuNavbar({ auth }) {
                   </ul>
                 </div>
               </div>
-            </Link>
           </li>
           <li className='dropdown-item'>
-            <Link href="#" className='itemMenu'>
               <div className='flex'>
-                <span>Les équipes Séniors</span>
+                <Link href="#" className='itemMenu'>
+                  <span>Les équipes Séniors</span>
+                </Link>
                 <div>
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
@@ -60,12 +61,12 @@ export default function MenuNavbar({ auth }) {
                   </ul>
                 </div>
               </div>
-            </Link>
           </li>
           <li className='dropdown-item'>
-            <Link href="#" className='itemMenu'>
               <div className='flex'>
-                <span>Les équipes Jeunes</span>
+                <Link href="#" className='itemMenu'>
+                  <span>Les équipes Jeunes</span>
+                </Link>
                 <div>
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
@@ -79,17 +80,17 @@ export default function MenuNavbar({ auth }) {
                   </ul>
                 </div>
               </div>
-            </Link>
           </li>
           <li>
-            <Link href="#" className='itemMenu'>
+            <Link href={route('actu.index')} className='itemMenu'>
                 <span>Actualités</span>
             </Link>
           </li>
           <li className='dropdown-item'>
-            <Link href="#" className='itemMenu'>
               <div className='flex'>
-                <span>Partenaires</span>
+                <Link href="#" className='itemMenu'>
+                  <span>Partenaires</span>
+                </Link>
                 <div>
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
@@ -100,12 +101,12 @@ export default function MenuNavbar({ auth }) {
                   </ul>
                 </div>
               </div>
-            </Link>
           </li>
           <li className='dropdown-item'>
-            <Link href="#" className='itemMenu'>
               <div className='flex'>
-                <span>Inscriptions</span>
+                <Link href="#" className='itemMenu'>
+                  <span>Inscriptions</span>
+                </Link>
                 <div>
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
@@ -118,7 +119,6 @@ export default function MenuNavbar({ auth }) {
                   </ul>
                 </div>
               </div>
-            </Link>
           </li>
           <li>
             <Link href="#" className='itemMenu'>

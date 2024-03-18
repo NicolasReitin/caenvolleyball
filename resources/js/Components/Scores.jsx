@@ -4,6 +4,7 @@ export default function Scores() {
   return (
     <>
         <div className="scores">
+          <h2>SAVE <span>THE DATE </span>!</h2>
           <div className='mt-16'>
             <iframe 
               id="65f4382f11d4460dd0e0c6a0" 

@@ -1,8 +1,10 @@
 import { Link } from '@inertiajs/react'
 import React from 'react'
 import ButtonGold from './ButtonGold'
+import moment from 'moment';
 
-export default function Actualites() {
+
+export default function Actualites({ firstActu, othersActu }) {
   return (
     <>
         <div className="actualites">
@@ -11,15 +13,28 @@ export default function Actualites() {
             <div className="first-actu">
               <Link href='#'>
                 <div className='relative'>
-                    <img src="/assets/images/teamN3-3.jpg" alt="" />
+                    <img src={firstActu.photo} alt="" />
                     <div class="filtre-img"></div>
                 </div>
-                <p className='ml-5 mt-1'>Le 07 mars 2024</p>
-                <h3 className='ml-5 mt-1'><strong>Titre de l'article</strong></h3>
+                <p className='ml-5 mt-1'>Le { moment(firstActu.created_at).locale('fr').format('DD/MM/YYYY') }</p>
+                <h3 className='ml-5 mt-1'><strong> {firstActu.titre} </strong></h3>
               </Link>
             </div>
+            
             <div className="others-actu flex flex-col gap-2 mt-8 ml-5">
-                <div className='block-others-actus'>
+              {
+                Object.values(othersActu).map((actu) =>(
+                  <div 
+                  key={actu.id}
+                  className='block-others-actus'>
+                    <Link href='#' >
+                        <p className='ml-3'>Le { moment(actu.created_at).locale('fr').format('DD/MM/YYYY') }</p>
+                        <h3 className='ml-3 mt-2'><strong> { actu.titre }</strong></h3>
+                    </Link>                  
+                  </div>
+                ))
+              }
+                {/* <div className='block-others-actus'>
                     <Link href='#' >
                         <p className='ml-3'>Le 07 mars 2024</p>
                         <h3 className='ml-3 mt-2'><strong>Titre de l'article</strong></h3>
@@ -48,7 +63,7 @@ export default function Actualites() {
                         <p className='ml-3'>Le 07 mars 2024</p>
                         <h3 className='ml-3 mt-2'><strong>Titre de l'article</strong></h3>
                     </Link>
-                </div>
+                </div> */}
               <ButtonGold
                 href = '#'
                 classNameButton = 'all-actus' 

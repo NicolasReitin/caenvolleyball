@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\actualite;
+use Inertia\Inertia;
+use App\Models\Actualite;
 use App\Http\Requests\StoreactualiteRequest;
 use App\Http\Requests\UpdateactualiteRequest;
 
@@ -13,7 +14,9 @@ class ActualiteController extends Controller
      */
     public function index()
     {
-        //
+        $actualites = Actualite::all();
+        return Inertia::render('Actualites/index', ['actualites' => $actualites]);
+        
     }
 
     /**

@@ -1,18 +1,18 @@
 import '../../sass/welcome.scss'  
 
-import Actualites from '@/Components/Actualites'
-import Reseaux from '@/Components/Reseaux'
+import Header from '@/Layouts/Header'
 import Scores from '@/Components/Scores'
 import MainPhoto from '@/Components/header/MainPhoto'
+import Actualites from '@/Components/Actualites'
+import Reseaux from '@/Components/Reseaux'
 import Footer from '@/Layouts/Footer'
-import Header from '@/Layouts/Header'
 import { Head } from '@inertiajs/react'
 import React from 'react'
 
-export default function Welcome({auth}) {
+export default function Welcome({auth, firstActu, othersActu}) {
   return (
     <>
-    {console.log(auth)}
+    {/* {console.log(auth)} */}
         <Head title="Accueil" />
 
         <Header />
@@ -21,7 +21,10 @@ export default function Welcome({auth}) {
 
         <Scores />
 
-        <Actualites />
+        <Actualites 
+          firstActu={firstActu}
+          othersActu={othersActu}
+        />
 
         <Reseaux />
 
