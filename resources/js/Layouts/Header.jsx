@@ -12,7 +12,7 @@ export default function Header() {
                 <div className="navbar-content">
                     <div className="flex justify-around">
                         <LogoClub 
-                        filePath="/assets/images/cvb4.png"
+                        filePath="/assets/images/logo-cvb-black.png"
                         />
 
                         <MenuNavbar />

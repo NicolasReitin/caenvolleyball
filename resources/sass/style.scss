@@ -1,6 +1,6 @@
 $jauneCVB: #e09900;
 $rougeCVB: #b91a16;
-$bleuCVB: #183972;
+$bleuCVB: #111731;
 $whiteFondCVB: #F9F9F9;
 
 $fontTitle: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
@@ -87,14 +87,15 @@ body{
     .itemMenu{
         white-space: nowrap;
     }
+    .logoClub{
+        // position: absolute;
+        top: 0%;
+        left: 15%;
+        width: 0px;
+        min-width: 100px;
+    }
 }
-.logoClub{
-    // position: absolute;
-    top: 10%;
-    left: 5%;
-    width: 100px;
-    min-width: 100px;
-}
+
 
 // _______________________Dropdown menu___________________
 
@@ -149,7 +150,7 @@ body{
 //________________________________________________________________
 .scores{
     margin: 20px auto;
-    width: 70%;
+    width: 80%;
 }
 
 
@@ -158,9 +159,10 @@ body{
 // _____________________________ Atualités ____________________________
 //________________________________________________________________
 .actualites{
+    position: relative;
     margin: 20px auto;
     padding: 10px;
-    width: 60%;
+    width: 80%;
     // height: 600px;
     h2{
         position: relative;
@@ -168,7 +170,7 @@ body{
         margin: $marginTitle;
         Font-family: $fontTitle;
         font-size: $sizeTitle;
-        color: $bleuCVB;
+        color: white;
         font-weight: 900;
     }
     h2::after {
@@ -189,7 +191,7 @@ body{
         height: 60%;
         min-height: 500px;
         background: rgb(255, 255, 255);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         h3{
             color: $bleuCVB;
@@ -220,6 +222,7 @@ body{
         transition: transform 0.3s ease-in-out;
         &:hover{
             transform: scale(1.01);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
         }
     }
     .others-actu{
@@ -234,7 +237,7 @@ body{
             padding: 12px;
             width: auto;
             background: rgb(255, 255, 255);
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             h3{
                 color: $bleuCVB;
@@ -247,6 +250,7 @@ body{
             transition: transform 0.3s ease-in-out;
             &:hover{
                 transform: scale(1.02);
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
             }
         }
         .all-actus{
@@ -259,14 +263,26 @@ body{
             font-weight: 900;
             color: white;
             border-radius: 5px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
             &:hover{
                 transform: scale(1.02);
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
             }
         }
         
     }
+}
+.actualites::after {
+    content: '';
+    position: absolute;
+    top: 10%; /* Commence à 60% de la hauteur */
+    left: -20%;
+    right: 20%;
+    width: 200%;
+    height: 70%;
+    background-color: #111731;
+    z-index: -1; /* Assurez-vous que l'arrière-plan reste en arrière */
 }
 
 //________________________________________________________________
@@ -306,7 +322,6 @@ body{
         via https://www.shapedivider.app/
     */
 .custom-shape-divider-bottom-1709894291 {
-
     bottom: 0;
     left: 0;
     width: 100%;
@@ -330,23 +345,83 @@ body{
     width: 100%;
     background: $bleuCVB;
     .logoClub{
-        width: 150px;
+        width: 200px;
     }
     .infos-pratiques{
         line-height: 150%;
         h2{
             font-size: 32px;
+            font-weight: 900;
+            text-decoration: underline;
             color: white;
         }
         p{
+            font-size: 20px;
             color: white;
         }
     }
-    .reseaux-sociaux{
-        width: 50px;
-        transition: transform 0.3s ease-in-out;
-        &:hover{
-            transform: scale(1.2);
+    .mentions{
+        li {
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+            display: inline-block;
+            margin: 0;
+            text-decoration: none;
+            position: relative;
         }
+        li::before{
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $jauneCVB;
+            transition: width 0.4s ease-in-out, transform 0.4s ease-in-out;
+            transform-origin: left;
+        }
+        li:hover::before {
+            width: 100%;
+            left: 0;
+        }  
+    }
+    .reseaux-sociaux img{
+            width: 30px;
+            transition: transform 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+    }
+    .sign{
+        p{
+            font-size: 16px;
+        }
+        a {
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+            display: inline-block;
+            margin: 0;
+            text-decoration: none;
+            position: relative;
+        }
+        a::before{
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $jauneCVB;
+            transition: width 0.4s ease-in-out, transform 0.4s ease-in-out;
+            transform-origin: left;
+        }
+        a:hover::before {
+            width: 100%;
+            left: 0;
+        }    
     }
 }
+
+// white-space: nowrap;
