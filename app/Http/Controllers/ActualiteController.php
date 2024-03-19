@@ -39,9 +39,9 @@ class ActualiteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(actualite $actualite)
+    public function show(actualite $actu)
     {
-        //
+        return Inertia::render('Actualites/show', ['actu' => $actu]);
     }
 
     /**

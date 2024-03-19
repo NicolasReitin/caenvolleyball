@@ -1,7 +1,7 @@
+import React from 'react'
 import Footer from '@/Layouts/Footer'
 import Header from '@/Layouts/Header'
 import { Head, Link } from '@inertiajs/react'
-import React from 'react'
 import moment from 'moment';
 
 import '../../../sass/actualites.scss'  
@@ -29,13 +29,15 @@ export default function index({ auth, actualites }) {
                 {
                     actualites.data.map((actu)=> (
                         <div className='card' key={actu.id}>
-                            <div className='relative'>
-                                <img src={actu.photo} alt="" />
-                                <div class="filtre-img"></div>
-                            </div>
-                            <h2>{ actu.titre }</h2>
-                            <h3>Le { moment(actu.created_at).locale('fr').format('DD/MM/YYYY') }</h3>
-                            {/* <p className='content'>{ actu.content }</p> */}
+                            <Link href={route('actu.show', {actu: actu.id})}>
+                                <div className='relative'>
+                                    <img src={actu.photo} alt="" />
+                                    <div class="filtre-img"></div>
+                                </div>
+                                <h2>{ actu.titre }</h2>
+                                <h3>Le { moment(actu.created_at).locale('fr').format('DD/MM/YYYY') }</h3>
+                                {/* <p className='content'>{ actu.content }</p> */}
+                            </Link>
                         </div>
                     ))
                 }

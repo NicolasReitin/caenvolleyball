@@ -11,7 +11,7 @@ export default function Actualites({ firstActu, othersActu }) {
           <h2>LES ACTUALITÉS</h2>
           <div className="flex justify-center mt-10">
             <div className="first-actu">
-              <Link href='#'>
+              <Link href={route('actu.show', {actu: firstActu.id})}>
                 <div className='relative'>
                     <img src={firstActu.photo} alt="" />
                     <div class="filtre-img"></div>
@@ -27,7 +27,7 @@ export default function Actualites({ firstActu, othersActu }) {
                   <div 
                   key={actu.id}
                   className='block-others-actus'>
-                    <Link href='#' >
+                    <Link href={route('actu.show', {actu: actu.id})}>
                         <p className='ml-3'>Le { moment(actu.created_at).locale('fr').format('DD/MM/YYYY') }</p>
                         <h3 className='ml-3 mt-2'><strong> { actu.titre }</strong></h3>
                     </Link>                  

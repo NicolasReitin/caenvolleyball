@@ -46,6 +46,7 @@ section{
         height: 4px;
         background: $rougeCVB;
     }
+    //dans la page actualités
     .cards{
         margin: 0% 6% 3%;
         display: flex;
@@ -58,7 +59,53 @@ section{
             min-height: auto;
             background: white;
             border: 1px solid #d8d8d8;
+
+            h2{
+                font-size: 20px;
+                font-weight: 800;
+                margin: 10px 10px;
+                overflow: hidden;
+                padding: 0 10px;
+                color: #353740;
+            }
+            h3{
+                margin: 10px 10px;
+                padding: 0 10px;
+                color: #989fa6;
+            }
+            // .content{
+            //     margin-top: 10px;
+            //     line-height: 150%;
+            //     height: 100px;
+            //     overflow: hidden;
+            //     padding: 0 10px;
+            //     text-justify: auto;
+            // }
+            img{
+                height: 350px;
+                min-width: 100%;
+                object-fit: cover;
+            }
+            .filtre-img{
+                background-color: rgba(0,0,0,0.1);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                z-index: 1;
+            }
         }
+    }
+
+    //dans la page pour chaque actualité individuelle
+    .card-actu{
+        margin: 10% auto;
+        width: 900px;
+        min-height: auto;
+        background: white;
+        border: 1px solid #d8d8d8;
+
         h2{
             font-size: 20px;
             font-weight: 800;
@@ -72,16 +119,14 @@ section{
             padding: 0 10px;
             color: #989fa6;
         }
-        // .content{
-        //     margin-top: 10px;
-        //     line-height: 150%;
-        //     height: 100px;
-        //     overflow: hidden;
-        //     padding: 0 10px;
-        //     text-justify: auto;
-        // }
+        .content{
+            margin-top: 10px;
+            line-height: 150%;
+            padding: 0 10px;
+            text-justify: auto;
+        }
         img{
-            height: 350px;
+            height: 650px;
             min-width: 100%;
             object-fit: cover;
         }

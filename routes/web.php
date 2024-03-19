@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/actualites', [ActualiteController::class, 'index'])->name('actu.index');
-Route::get('/actualite/{actu}', [ActualiteController::class, 'index'])->name('actu.show');
+Route::get('/actualite/{actu}', [ActualiteController::class, 'show'])->name('actu.show');
 
 
 
