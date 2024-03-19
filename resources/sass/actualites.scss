@@ -23,7 +23,7 @@ section{
     h1{
         position: relative;
         white-space: nowrap;
-        margin: 5%;
+        margin: 5% 0 3% 0;
         Font-family: $fontTitle;
         font-size: $sizeTitle;
         color: $bleuCVB;
@@ -39,16 +39,16 @@ section{
         background: $rougeCVB;
     }
     .cards{
-        margin: 5% 10%;
+        margin: 0% auto 3%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         .card{
-            background: white;
-            margin-top: 5%;
+            margin-top: 2%;
             margin-right: 3%;
-            width: 600px;
+            width: 500px;
             min-height: auto;
+            background: white;
             border: 1px solid #d8d8d8;
         }
         h2{
@@ -73,7 +73,7 @@ section{
         //     text-justify: auto;
         // }
         img{
-            height: 450px;
+            height: 350px;
             min-width: 100%;
             object-fit: cover;
         }
