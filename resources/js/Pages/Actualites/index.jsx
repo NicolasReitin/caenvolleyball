@@ -6,6 +6,7 @@ import moment from 'moment';
 
 import '../../../sass/actualites.scss'  
 import ButtonGold from '@/Components/ButtonGold';
+import MainPhoto from '@/Components/header/MainPhoto';
 
 
 export default function index({ auth, actualites }) {
@@ -14,39 +15,16 @@ export default function index({ auth, actualites }) {
         <Head title="Actualités" />
 
         <Header />
+
+        <MainPhoto 
+          src='/assets/images/cover2baw.jpg'
+          alt={"Caen Volley Ball Photo"}
+          className={'main-photo'}
+        />
         
         
         <section>
-            <h1 className='text-center text-5xl'>ACTUALITÉS</h1>
-            <div className='flex justify-center gap-8'>
-                {actualites.prev_page_url && (
-                    <>
-                        <ButtonGold
-                            href = {actualites.prev_page_url}
-                            classNameButton = 'button-next-previous' 
-                            content = {
-                                <>
-                                    <img src="assets/icones/left.png" alt="next" />
-                                </>
-                            }
-                        />
-                        {/* <Link href={actualites.prev_page_url}>Précédent</Link> */}
-                    </>
-                )}
-                {actualites.next_page_url && (
-                    <>
-                        <ButtonGold
-                            href = {actualites.next_page_url}
-                            classNameButton = 'button-next-previous' 
-                            content = {
-                                <>
-                                    <img src="assets/icones/right.png" alt="next" />
-                                </>
-                            }
-                        />
-                    </>
-                )}
-            </div>
+            <h1>ACTUALITÉS</h1>
             <div className='cards'>
                 {
                     actualites.data.map((actu)=> (

@@ -17,7 +17,11 @@ export default function Welcome({auth, firstActu, othersActu}) {
 
         <Header />
 
-        <MainPhoto />
+        <MainPhoto 
+          src='/assets/images/cover.jpg'
+          alt={"Caen Volley Ball Photo"}
+          className={'main-photo-cover'}
+        />
 
         <Scores />
 
