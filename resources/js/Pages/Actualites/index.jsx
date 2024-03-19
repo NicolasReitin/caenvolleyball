@@ -16,11 +16,14 @@ export default function index({ auth, actualites }) {
 
         <Header />
 
-        <MainPhoto 
-          src='/assets/images/cover2baw.jpg'
-          alt={"Caen Volley Ball Photo"}
-          className={'main-photo'}
-        />
+        <div className='bloc-main-photo'>
+            <MainPhoto 
+            src='/assets/images/cover2baw.jpg'
+            alt={"Caen Volley Ball Photo"}
+            className={'main-photo'}
+            />
+            {/* <h1>ACTUALITÉS</h1> */}
+        </div>
         
         
         <section>

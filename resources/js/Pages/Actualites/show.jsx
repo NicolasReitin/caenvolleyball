@@ -8,7 +8,7 @@ import '../../../sass/actualites.scss'
 
 
 export default function show({ actu }) {
-    console.log(actu.photo);
+    console.log(actu);
   return (
     <>
         <Head title="Actualités" />
@@ -16,16 +16,17 @@ export default function show({ actu }) {
         <Header />
 
         <section>
+            <article>
             <h1>{ actu.titre }</h1>
-            <div className='card-actu' key={actu.id}>
-                <div className='relative'>
-                    <img src={actu.photo} alt="" />
-                    <div class="filtre-img"></div>
+                <div className='card-actu'>
+                    <div className='relative'>
+                        <h3>Par { actu.auteur } | Le { moment(actu.created_at).format('DD/MM/YYYY') }</h3> {/* "moment" permet de convertir la date au format demandé */}
+                        <img src={actu.photo} alt="" />
+                        <div class="filtre-img"></div>
+                    </div>
+                    <p className='content'>{ actu.content }</p>
                 </div>
-                <h2>{ actu.titre }</h2>
-                <h3>Le { moment(actu.created_at).locale('fr').format('DD/MM/YYYY') }</h3>
-                <p className='content'>{ actu.content }</p>
-            </div>
+            </article>
         </section>
 
         <Footer />
