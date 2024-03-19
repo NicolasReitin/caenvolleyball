@@ -14,7 +14,8 @@ class ActualiteController extends Controller
      */
     public function index()
     {
-        $actualites = Actualite::latest()->get();
+        $actualites = Actualite::latest()->simplePaginate(9);
+        // dd($actualites);
         return Inertia::render('Actualites/index', ['actualites' => $actualites]);
         
     }

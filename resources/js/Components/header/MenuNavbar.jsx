@@ -12,15 +12,20 @@ export default function MenuNavbar({ auth }) {
               <span>Accueil</span>
             </Link>
           </li>
+          <li>
+            <Link href={route('actu.index')} className='itemMenu'>
+                <span>Actu</span>
+            </Link>
+          </li>
           <li className='dropdown-item'>
               <div className='flex'>
                 <Link href="#" className='itemMenu'>
-                  <span>Le Club</span>
+                  <span>Club</span>
                 </Link>
                 <div >
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
-                <div className='dropdown-content'>
+                <div className='dropdown-content w-60'>
                   <ul>
                     <li><Link href="#">Historique</Link></li>
                     <li><Link href="#">Organigramme</Link></li>
@@ -35,23 +40,23 @@ export default function MenuNavbar({ auth }) {
           <li className='dropdown-item'>
               <div className='flex'>
                 <Link href="#" className='itemMenu'>
-                  <span>Les équipes Séniors</span>
+                  <span>Équipes Séniors</span>
                 </Link>
                 <div>
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
-                <div className='dropdown-content'>
+                <div className='dropdown-content w-64'>
                   <ul>
                     {/* <h3>Seniors</h3> */}
-                    <li><Link href="#">La Nationale 3 Masculine</Link></li>
-                    <li><Link href="#">la Prénationale Masculine</Link></li>
-                    <li><Link href="#">La Régionale Masculine</Link></li>
-                    <li><Link href="#">La Régionale Féminine</Link></li>
-                    <li><Link href="#">Les Départementales Masculines</Link></li>
-                    <li><Link href="#">La Départementale Féminine</Link></li>
-                    <li><Link href="#">L'Ufolep</Link></li>
-                    <li><Link href="#">Le Volley assis</Link></li>
-                    <li><Link href="#">Les Loisirs</Link></li>
+                    <li><Link href="#">Nationale 3 Masculine</Link></li>
+                    <li><Link href="#">Prénationale Masculine</Link></li>
+                    <li><Link href="#">Régionale Masculine</Link></li>
+                    <li><Link href="#">Régionale Féminine</Link></li>
+                    <li><Link href="#">Départementales Masculines</Link></li>
+                    <li><Link href="#">Départementale Féminine</Link></li>
+                    <li><Link href="#">Ufolep</Link></li>
+                    <li><Link href="#">Volley assis</Link></li>
+                    <li><Link href="#">Loisirs</Link></li>
                     {/* <hr />
                     <h3>Jeunes</h3>
                     <li><Link href="#">M13</Link></li>
@@ -65,26 +70,21 @@ export default function MenuNavbar({ auth }) {
           <li className='dropdown-item'>
               <div className='flex'>
                 <Link href="#" className='itemMenu'>
-                  <span>Les équipes Jeunes</span>
+                  <span>Équipes Jeunes</span>
                 </Link>
                 <div>
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
-                <div className='dropdown-content'>
+                <div className='dropdown-content w-44'>
                   <ul>
-                    <li><Link href="#">Les M13 Masculins</Link></li>
-                    <li><Link href="#">Les M15 Masculins</Link></li>
-                    <li><Link href="#">Les M18 Féminines</Link></li>
-                    <li><Link href="#">Les M18 Masculins</Link></li>
-                    <li><Link href="#">Les M21 Masculins</Link></li>
+                    <li><Link href="#">M13 Masculins</Link></li>
+                    <li><Link href="#">M15 Masculins</Link></li>
+                    <li><Link href="#">M18 Féminines</Link></li>
+                    <li><Link href="#">M18 Masculins</Link></li>
+                    <li><Link href="#">M21 Masculins</Link></li>
                   </ul>
                 </div>
               </div>
-          </li>
-          <li>
-            <Link href={route('actu.index')} className='itemMenu'>
-                <span>Actualités</span>
-            </Link>
           </li>
           <li className='dropdown-item'>
               <div className='flex'>
@@ -94,7 +94,7 @@ export default function MenuNavbar({ auth }) {
                 <div>
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
-                <div className='dropdown-content'>
+                <div className='dropdown-content w-48'>
                   <ul>
                     <li><Link href="#">Nos partenaires</Link></li>
                     <li><Link href="#">Devenir partenaire</Link></li>
@@ -110,7 +110,7 @@ export default function MenuNavbar({ auth }) {
                 <div>
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
-                <div className='dropdown-content'>
+                <div className='dropdown-content w-64'>
                   <ul>
                     <li><Link href="#">Tarifs</Link></li>
                     <li><Link href="#">Modalités d'inscription</Link></li>

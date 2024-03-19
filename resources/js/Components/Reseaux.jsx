@@ -12,7 +12,7 @@ export default function Reseaux() {
                 <img src="assets/icones/big-facebook.png" alt="facebook club" />
               </a>
               <a href="https://www.instagram.com/caenvolleyball/" target='_blank'>
-                <img src="assets/icones/big-instagram.png" alt="" />
+                <img src="assets/icones/big-instagram.png" alt="Instagram Club" />
               </a>
             </div>
             <div className='flex justify-center'>
