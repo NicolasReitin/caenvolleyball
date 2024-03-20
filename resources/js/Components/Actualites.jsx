@@ -34,42 +34,11 @@ export default function Actualites({ firstActu, othersActu }) {
                   </div>
                 ))
               }
-                {/* <div className='block-others-actus'>
-                    <Link href='#' >
-                        <p className='ml-3'>Le 07 mars 2024</p>
-                        <h3 className='ml-3 mt-2'><strong>Titre de l'article</strong></h3>
-                    </Link>
-                </div>
-                <div className='block-others-actus'>
-                    <Link href='#'>
-                        <p className='ml-3'>Le 07 mars 2024</p>
-                        <h3 className='ml-3 mt-2'><strong>Titre de l'article</strong></h3>
-                    </Link>
-                </div>
-                <div className='block-others-actus'>
-                    <Link href='#'>
-                        <p className='ml-3'>Le 07 mars 2024</p>
-                        <h3 className='ml-3 mt-2'><strong>Titre de l'article</strong></h3>
-                    </Link>
-                </div>
-                <div className='block-others-actus'>
-                    <Link href='#'>
-                        <p className='ml-3'>Le 07 mars 2024</p>
-                        <h3 className='ml-3 mt-2'><strong>Titre de l'article</strong></h3>
-                    </Link>
-                </div>
-                <div className='block-others-actus'>
-                    <Link href='#'>
-                        <p className='ml-3'>Le 07 mars 2024</p>
-                        <h3 className='ml-3 mt-2'><strong>Titre de l'article</strong></h3>
-                    </Link>
-                </div> */}
               <ButtonGold
-                href = '#'
+                href = {route('actu.index')}
                 classNameButton = 'all-actus' 
                 content = 'TOUTES LES ACTUS'
               />
-              
             </div>
           </div>
         </div>

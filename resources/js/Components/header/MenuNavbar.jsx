@@ -14,7 +14,7 @@ export default function MenuNavbar({ auth }) {
           </li>
           <li>
             <Link href={route('actu.index')} className='itemMenu'>
-                <span>Actu</span>
+                <span>Actualités</span>
             </Link>
           </li>
           <li className='dropdown-item'>
@@ -57,12 +57,6 @@ export default function MenuNavbar({ auth }) {
                     <li><Link href="#">Ufolep</Link></li>
                     <li><Link href="#">Volley assis</Link></li>
                     <li><Link href="#">Loisirs</Link></li>
-                    {/* <hr />
-                    <h3>Jeunes</h3>
-                    <li><Link href="#">M13</Link></li>
-                    <li><Link href="#">M15</Link></li>
-                    <li><Link href="#">M18</Link></li>
-                    <li><Link href="#">M21</Link></li> */}
                   </ul>
                 </div>
               </div>
