@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('staffs', function (Blueprint $table) {
+        Schema::create('staff', function (Blueprint $table) {
+            //le nom est mis au singulier suite erreur de laravel qui ne trouve pas staffs
             $table->id();
             $table->integer('licence')->nullable();
             $table->string('nom', 50);
             $table->string('prenom', 50);
+            $table->string('mail', 50);
             $table->string('tel', 15);
             $table->string('fonction', 50);
             $table->string('photo');

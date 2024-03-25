@@ -1,5 +1,22 @@
 @import 'style.scss';
 
+.button-resultats{
+    bottom: map-get($buttonGold, bottom);
+    right: map-get($buttonGold, right);
+    padding: map-get($buttonGold, padding);
+    background: map-get($buttonGold, background);
+    font-size: map-get($buttonGold, font-size);
+    font-weight: map-get($buttonGold, font-weight);
+    color: map-get($buttonGold, color);
+    border-radius: map-get($buttonGold, border-radius);
+    box-shadow: map-get($buttonGold, box-shadow);
+    transition: map-get($buttonGold, transition);
+    &:hover{
+        // transform: scale(1.02);
+        background-color: $jauneHoverCVB;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+}
 
 section{
     h1{
@@ -35,18 +52,36 @@ section{
         flex-wrap: wrap;
         .player-card{
             margin: 2% auto;
-            
-            
         }
     }
     img{
-        width: 500px;
+        width: auto;
+        max-width: 350px;
     }
     h3{
         Font-family: $fontTitle;
         text-align: center;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 700;
         color: $bleuCVB;
+        word-wrap: break-word;
+    }
+}
+.scores{
+    width: auto;
+    margin: 2% 5% 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    // gap: 50px;
+    .calendrier{
+        width: 50%;
+        min-width: 500px;
+        max-height: 310px;
+    }
+    .classement{
+        width: 50%;
+        min-width: 500px;
+        max-height: 310px;
     }
 }

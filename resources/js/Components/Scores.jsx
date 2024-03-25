@@ -1,18 +1,15 @@
 import React from 'react'
 
-export default function Scores() {
+export default function Scores( { id, height, src, style }) {
   return (
     <>
         <div className="scores">
-          <h2>SAVE <span>THE DATE </span>!</h2>
-          <div className='mt-16'>
-            <iframe 
-              id="65f4382f11d4460dd0e0c6a0" 
-              title="scores Score'N'Co"
-              height="280" src="https://v1.scorenco.com/widget/65f4382f11d4460dd0e0c6a0/" 
-              style={{display: 'block', width: '100%', overflow: 'auto', margin: 'auto', borderWidth: '0px', borderRadius: '5px'}}
-            ></iframe>
-          </div>
+          <iframe 
+            id={id }
+            height={height} 
+            src={src}
+            style={style}>
+          </iframe>
         </div>
     </>
   )
