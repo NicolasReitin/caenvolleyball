@@ -47,14 +47,13 @@ export default function MenuNavbar({ auth }) {
                 </div>
                 <div className='dropdown-content w-64'>
                   <ul>
-                    {/* <h3>Seniors</h3> */}
-                    <li><Link href="#">Nationale 3 Masculine</Link></li>
+                    <li><Link href={route('equipe.index', 2)}>Nationale 3 Masculine</Link></li>
                     <li><Link href="#">Prénationale Masculine</Link></li>
                     <li><Link href="#">Régionale Masculine</Link></li>
                     <li><Link href="#">Régionale Féminine</Link></li>
                     <li><Link href="#">Départementales Masculines</Link></li>
                     <li><Link href="#">Départementale Féminine</Link></li>
-                    <li><Link href="#">Ufolep</Link></li>
+                    <li><Link href={route('equipe.index', 1)}>Ufolep</Link></li>
                     <li><Link href="#">Volley assis</Link></li>
                     <li><Link href="#">Loisirs</Link></li>
                   </ul>

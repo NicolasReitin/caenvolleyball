@@ -10,7 +10,7 @@ class Article extends Model
     use HasFactory;
 
     // 1-n avec lignes_commandes
-    public function ligne_commandes() { // association N/N avec table article_tag
+    public function ligne_commandes() { 
         return $this->hasMany(Lignes_commande::class);
     }
 }

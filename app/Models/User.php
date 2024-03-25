@@ -13,7 +13,7 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     //1-n avec staffs
-    public function staff() { // association N/N avec table article_tag
+    public function staff() { 
         return $this->hasOne(Staff::class);
     }
 

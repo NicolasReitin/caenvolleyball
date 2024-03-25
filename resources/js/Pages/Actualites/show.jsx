@@ -8,7 +8,6 @@ import '../../../sass/actualites.scss'
 
 
 export default function show({ actu }) {
-    console.log(actu);
   return (
     <>
         <Head title="Actualités" />

@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\ActualiteController;
-use App\Http\Controllers\ProfileController;
-use App\Models\Actualite;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Actualite;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ActualiteController;
+use App\Http\Controllers\EquipeSeniorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,27 +42,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
+// ----------------------------- Actualités ----------------------------------------
 Route::get('/actualites', [ActualiteController::class, 'index'])->name('actu.index');
 Route::get('/actualite/{actu}', [ActualiteController::class, 'show'])->name('actu.show');
 
+// ----------------------------- Equipes ----------------------------------------
+Route::get('/equipe/{equipe_id}', [EquipeSeniorController::class, 'index'])->name('equipe.index');
 
-
-/*
-Route::get('/events', [EventController::class, 'index'])->name('event.index');
-Route::get('/event/{event}', [EventController::class, 'show'])->name('event.show');
-Route::get('/event/create/{event}', [EventController::class, 'create'])->name('event.create');
-Route::post('/event/store', [EventController::class, 'store'])->name('event.store');
-Route::get('/event/booking/success/{eventId}', function ($eventId) {
-    $event = Event::with('artists', 'showroom')
-    ->find($eventId);
-    return Inertia::render('event/Success', ['event' => $event]);
-})->name('event.success');
-Route::get('/event/booking/error/{eventId}', function ($eventId) {
-    $event = Event::with('artists', 'showroom')
-    ->find($eventId);
-    return Inertia::render('event/Error', ['event' => $event]);
-}) ->name('event.error');
-*/
 
 require __DIR__.'/auth.php';

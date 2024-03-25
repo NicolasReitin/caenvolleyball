@@ -1,0 +1,52 @@
+@import 'style.scss';
+
+
+section{
+    h1{
+        position: relative;
+        white-space: nowrap;
+        margin: 3%;
+        Font-family: $fontTitle;
+        font-size: $sizeTitle;
+        color: $bleuCVB;
+        font-weight: 900;
+    }
+    h1::after {
+        content: '';
+        position: absolute;
+        bottom: -5px; /* Ajustez cette valeur selon vos besoins */
+        left: 0;
+        width: 60%; /* Largeur de la barre égale à la largeur du titre */
+        height: 4px;
+        background: $rougeCVB;
+    }    
+    h2{
+        Font-family: $fontTitle;
+        font-size: 30px;
+        text-align: center;
+        font-weight: 700;
+        color: $bleuCVB;
+    }
+    .players-cards{
+        width: auto;
+        padding: 0 10%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .player-card{
+            margin: 2% auto;
+            
+            
+        }
+    }
+    img{
+        width: 500px;
+    }
+    h3{
+        Font-family: $fontTitle;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        color: $bleuCVB;
+    }
+}
