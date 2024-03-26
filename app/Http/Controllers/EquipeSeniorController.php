@@ -15,15 +15,18 @@ class EquipeSeniorController extends Controller
      */
     public function index($equipe_id)
     {
-        $staff = Staff::all();
+        $coachs = Staff::query()
+        ->where('equipe_senior_id', $equipe_id)
+        ->get();
+
         $equipe = Equipe_senior::query()
         ->where('id', $equipe_id)
         ->with(['joueurs' => function ($query) {
             $query->orderBy('nom', 'asc'); // Tri par ordre alphabétique du nom
         }])
         ->first();
-        // $joueursParEquipe = $equipes[1]->joueurs[1]->nom;
-        return Inertia::render('Equipe/Index', ['equipe' => $equipe, 'staff' => $staff]);
+
+        return Inertia::render('Equipe/Index', ['equipe' => $equipe, 'coachs' => $coachs]);
     }
 
     /**

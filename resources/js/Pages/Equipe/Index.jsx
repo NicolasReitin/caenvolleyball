@@ -1,15 +1,12 @@
 import Footer from '@/Layouts/Footer'
 import Header from '@/Layouts/Header'
-import { Head, Link } from '@inertiajs/react'
+import { Head } from '@inertiajs/react'
 import React from 'react'
 
 import '../../../sass/equipes.scss'  
-import ButtonGold from '@/Components/ButtonGold'
-import Scores from '@/Components/Scores'
 
 
-export default function index( {equipe, staff} ) {
-  console.log(staff);
+export default function index( {equipe, coachs} ) {
   const joueurs = equipe.joueurs
 
   return (
@@ -36,22 +33,19 @@ export default function index( {equipe, staff} ) {
           <div className='coach-card'>
             <h2 className='mt-2'>Coachs</h2>
             <div className="flex justify-center">
-              <div>
-                {
-                  equipe.id === 1 ? (
-                    <>
-                      <img src={staff[1].photo} alt="" />
-                      <h3>{staff[1].nom + ' ' + staff[1].prenom}</h3>
-                    </>
-                  ) : (
-                    <>
-                      <img src="/assets/images/no-player.png" alt="" />
-                      <h3>NICOLAS PANIER</h3>
-                    </>
-                  )
-                } 
-                
-              </div>
+              {
+              coachs.map((coach) => (
+                <div key={coach.id}>
+                  {coach.photo ?(
+                    <img src={coach.photo} alt="" />
+                    ) : (
+                    <img src="/assets/images/no-player.png" alt="" />
+                    )
+                  }                    
+                  <h3>{coach.nom + ' ' + coach.prenom}</h3>
+                </div>
+              ))
+              }                
             </div>
           </div>
         </section>

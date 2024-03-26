@@ -50,4 +50,17 @@ Route::get('/actualite/{actu}', [ActualiteController::class, 'show'])->name('act
 Route::get('/equipe/{equipe_id}', [EquipeSeniorController::class, 'index'])->name('equipe.index');
 
 
+
+
+// ----------------------------- Divers ----------------------------------------
+Route::get('/planning', function () {
+    return Inertia::render('Divers/Planning');
+})->name('planning');
+Route::get('/organigramme', function () {
+    return Inertia::render('Divers/Organigramme');
+})->name('organigramme');
+Route::get('/historique', function () {
+    return Inertia::render('Divers/Historique');
+})->name('historique');
+
 require __DIR__.'/auth.php';

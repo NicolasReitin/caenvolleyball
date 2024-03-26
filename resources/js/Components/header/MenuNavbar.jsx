@@ -27,12 +27,11 @@ export default function MenuNavbar({ auth }) {
                 </div>
                 <div className='dropdown-content w-60'>
                   <ul>
-                    <li><Link href="#">Historique</Link></li>
-                    <li><Link href="#">Organigramme</Link></li>
+                    <li><Link href={route('historique')}>Historique</Link></li>
+                    <li><Link href={route('organigramme')}>Organigramme</Link></li>
                     <li><Link href="#">Règlement intérieur</Link></li>
                     <li><Link href="#">Le Staff</Link></li>
-                    <li><Link href="#">Planning / entrainements</Link></li>
-                    <li><Link href="#">Évènements</Link></li>
+                    <li><Link href={route('planning')}>Planning / entrainements</Link></li>
                   </ul>
                 </div>
               </div>
