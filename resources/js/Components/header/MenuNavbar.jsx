@@ -5,7 +5,7 @@ export default function MenuNavbar({ auth }) {
   // console.log(auth);
   return (
     <>
-      <div>
+      <div className='test'>
         <ul className='MenuNavbar mt-6'>
           <li>
             <Link href={route('welcome')} className='itemMenu'>

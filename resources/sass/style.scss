@@ -11,8 +11,19 @@ body{
 // _____________________________ Header ____________________________
 //________________________________________________________________
 
+.header{
+    height: 125px; //hauteur de introBar(35px) + Navbar(90px)
+    background-color: #ffffff;
+}
+.content{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
 .introBar{
     background: linear-gradient(to left, $rougeCVB 0%, $bleuCVB 100%);
+    height: 35px;
     p{
         margin-left: 20%;
         font-size: 18px;
@@ -28,16 +39,17 @@ body{
         }
     }
 }
+
 .navbar{
     position: relative;
+    width: 100%;
     height: 90px;
-    // border-bottom: solid 1px $bleuCVB;
-    background-color: #ffffff;
+    background-color: #ffffffe8;
     border-bottom: 1px solid #e5e5e5;
-
+    z-index: 1;
 
     .navbar-content{
-        margin: 10px 10%;
+        margin: 0 10%;
     }
     .MenuNavbar{
         display: flex;
@@ -116,7 +128,7 @@ body{
         border-top: 5px solid $jauneCVB;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
         padding: 20px;
-        background: white;
+        background: #ffffffe8;
         h3{
             color: $jauneCVB;
         }
