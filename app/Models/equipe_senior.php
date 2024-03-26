@@ -15,6 +15,11 @@ class Equipe_senior extends Model
         return $this->belongsToMany(Joueur::class, 'equipe_seniors_joueurs');
     }
 
+    //n-n avec staff
+    public function staff() { 
+        return $this->belongsToMany(Equipe_senior::class, 'staff');
+    }
+
     //1-n avec actualites
     public function actualites() { 
         return $this->hasMany(Actualite::class);

@@ -17,10 +17,12 @@ return new class extends Migration
             $table->integer('licence')->nullable();
             $table->string('nom', 50);
             $table->string('prenom', 50);
-            $table->string('mail', 50);
+            $table->string('email', 50);
             $table->string('tel', 15);
             $table->string('fonction', 50);
             $table->string('photo');
+            $table->foreignId(column: 'equipe_jeune_id')->constrained(table: 'equipe_jeunes')->nullable();
+            $table->foreignId(column: 'equipe_senior_id')->constrained(table: 'equipe_seniors')->nullable();
             $table->timestamps();
         });
     }

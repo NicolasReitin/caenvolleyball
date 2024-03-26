@@ -13,4 +13,16 @@ class Staff extends Model
     public function user() { 
         return $this->belongsTo(User::class);
     }
+
+    //n-n avec equipeSenior
+    public function equipeSenior() { 
+        return $this->belongsToMany(Equipe_senior::class, 'equipe_seniors');
+    }
+
+    //n-n avec equipeJunior
+    public function equipeJunior() { 
+        return $this->belongsToMany(Equipe_jeune::class, 'equipe_juniors');
+    }
+
+
 }
