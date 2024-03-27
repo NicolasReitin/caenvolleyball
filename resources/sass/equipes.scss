@@ -1,5 +1,6 @@
 @import 'style.scss';
 
+
 .button-resultats{
     bottom: map-get($buttonGold, bottom);
     right: map-get($buttonGold, right);
@@ -16,6 +17,10 @@
         background-color: $jauneHoverCVB;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     }
+}
+
+.team{
+    margin: 5% auto;
 }
 
 section{

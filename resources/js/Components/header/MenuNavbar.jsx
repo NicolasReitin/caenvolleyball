@@ -50,12 +50,12 @@ export default function MenuNavbar({ auth }) {
                   <ul>
                     <li><Link href={route('equipe.index', 2)}>Nationale 3 Masculine</Link></li>
                     <li><Link href={route('equipe.index', 3)}>Prénationale Masculine</Link></li>
-                    <li><Link href="#">Régionale Masculine</Link></li>
-                    <li><Link href="#">Régionale Féminine</Link></li>
+                    <li><Link href={route('equipe.index', 4)}>Régionale Masculine</Link></li>
+                    <li><Link href={route('equipe.index', 8)}>Régionale Féminine</Link></li>
                     <li><Link href="#">Départementales Masculines</Link></li>
                     <li><Link href="#">Départementale Féminine</Link></li>
                     <li><Link href={route('equipe.index', 1)}>Ufolep</Link></li>
-                    <li><Link href="#">Volley assis</Link></li>
+                    <li><Link href={route('equipe.index', 9)}>Volley assis</Link></li>
                     <li><Link href="#">Loisirs</Link></li>
                   </ul>
                 </div>

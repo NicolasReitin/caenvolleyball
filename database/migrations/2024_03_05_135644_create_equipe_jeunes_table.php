@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nom', 50);
             $table->string('division', 50);
+            $table->string('photo', 255)->nullable();
             $table->timestamps();
         });
     }
