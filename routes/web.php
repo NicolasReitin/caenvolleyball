@@ -53,6 +53,9 @@ Route::get('/equipe/{equipe_id}', [EquipeSeniorController::class, 'index'])->nam
 
 
 // ----------------------------- Divers ----------------------------------------
+Route::get('/projet', function () {
+    return Inertia::render('Divers/Projet');
+})->name('projet');
 Route::get('/planning', function () {
     return Inertia::render('Divers/Planning');
 })->name('planning');
@@ -62,5 +65,16 @@ Route::get('/organigramme', function () {
 Route::get('/historique', function () {
     return Inertia::render('Divers/Historique');
 })->name('historique');
+Route::get('/reglement', function () {
+    return Inertia::render('Divers/Reglement');
+})->name('reglement');
+Route::get('/statuts', function () {
+    return Inertia::render('Divers/Statuts');
+})->name('statuts');
+Route::get('/tarifs', function () {
+    return Inertia::render('Divers/Tarifs');
+})->name('tarifs');
+
+
 
 require __DIR__.'/auth.php';

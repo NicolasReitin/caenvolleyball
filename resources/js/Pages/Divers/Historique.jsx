@@ -6,7 +6,7 @@ import React from 'react'
 import '../../../sass/divers.scss'  
 
 
-export default function Planning() {
+export default function Historique() {
   return (
     <>
         <Head title='Historique' />

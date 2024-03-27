@@ -5,8 +5,8 @@ export default function MenuNavbar({ auth }) {
   // console.log(auth);
   return (
     <>
-      <div className='test'>
-        <ul className='MenuNavbar mt-6'>
+      <div>
+        <ul className='MenuNavbar mt-8'>
           <li>
             <Link href={route('welcome')} className='itemMenu'>
               <span>Accueil</span>
@@ -20,16 +20,18 @@ export default function MenuNavbar({ auth }) {
           <li className='dropdown-item'>
               <div className='flex'>
                 <Link href="#" className='itemMenu'>
-                  <span>Club</span>
+                  <span>Le club</span>
                 </Link>
                 <div >
                   <img src="/assets/icones/arrow-down-yellow.png" alt="" />
                 </div>
-                <div className='dropdown-content w-60'>
+                <div className='dropdown-content w-64'>
                   <ul>
+                    <li><Link href={route('projet')}>Le projet</Link></li>
                     <li><Link href={route('historique')}>Historique</Link></li>
                     <li><Link href={route('organigramme')}>Organigramme</Link></li>
-                    <li><Link href="#">Règlement intérieur</Link></li>
+                    <li><Link href={route('reglement')}>Règlement intérieur</Link></li>
+                    <li><Link href={route('statuts')}>Les statuts de l'association</Link></li>
                     <li><Link href="#">Le Staff</Link></li>
                     <li><Link href={route('planning')}>Planning / entrainements</Link></li>
                   </ul>
@@ -47,7 +49,7 @@ export default function MenuNavbar({ auth }) {
                 <div className='dropdown-content w-64'>
                   <ul>
                     <li><Link href={route('equipe.index', 2)}>Nationale 3 Masculine</Link></li>
-                    <li><Link href="#">Prénationale Masculine</Link></li>
+                    <li><Link href={route('equipe.index', 3)}>Prénationale Masculine</Link></li>
                     <li><Link href="#">Régionale Masculine</Link></li>
                     <li><Link href="#">Régionale Féminine</Link></li>
                     <li><Link href="#">Départementales Masculines</Link></li>
@@ -104,7 +106,7 @@ export default function MenuNavbar({ auth }) {
                 </div>
                 <div className='dropdown-content w-64'>
                   <ul>
-                    <li><Link href="#">Tarifs</Link></li>
+                    <li><Link href={route('tarifs')}>Tarifs</Link></li>
                     <li><Link href="#">Modalités d'inscription</Link></li>
                     <li><Link href="#">Comment remplir sa Licence</Link></li>
                     <li><Link href="#">Documents</Link></li>

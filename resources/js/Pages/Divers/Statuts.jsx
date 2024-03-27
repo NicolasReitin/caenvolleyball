@@ -6,17 +6,17 @@ import React from 'react'
 import '../../../sass/divers.scss'  
 
 
-export default function Reglement() {
+export default function Statuts() {
   return (
     <>
-        <Head title='Reglement' />
+        <Head title='Les statuts' />
 
         <Header />
 
         <section>
-            <h1>Règlement intérieur du Caen Volley Ball</h1>
-            <div className='reglement'>
-                <embed src="\assets\documents\reglement.pdf" type="application/pdf" width="100%" height="1000px" />
+            <h1>Les statuts du Caen Volley Ball</h1>
+            <div className='statuts'>
+                <embed src="\assets\documents\statuts.pdf" type="application/pdf" width="100%" height="1000px" />
             </div>
         </section>
 

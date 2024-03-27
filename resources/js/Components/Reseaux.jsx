@@ -17,9 +17,9 @@ export default function Reseaux() {
             </div>
             <div className='flex justify-center'>
                 <ButtonGold
-                    href = '#'
+                    href = {route('actu.index')}
                     classNameButton = 'button-post' 
-                    content = 'Voir nos derniers posts'
+                    content = 'Voir nos dernières actualités'
                 />
             </div>
         </div>

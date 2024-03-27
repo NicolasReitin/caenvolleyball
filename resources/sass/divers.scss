@@ -19,9 +19,45 @@ section{
         height: 4px;
         background: $rougeCVB;
     }
-    .planning, .organigramme, .historique{
+    .planning, .organigramme, .historique, .reglement, .statuts, .tarifs{
         margin: 5% 10%;
         display: flex;
         justify-content: center;
+    }
+    .reglement, .statuts, .tarifs{
+        border-bottom: solid 1px rgb(153, 153, 153);
+    }
+    .projet{
+        margin: 0 auto;
+        width: 60%;
+        .intro{
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5%;
+            p{
+                text-align: center;
+                line-height: 120%;
+            }
+        }
+        h3{
+            text-align: center;
+            font-weight: 900;
+            margin: 2% auto;
+            text-decoration: underline;
+        }
+        h4{
+            text-align: center;
+            margin: 2% auto;
+            font-weight: 700;
+        }
+        p{
+            line-height: 175%;
+            text-align: justify;
+            margin-bottom: 25px;
+            ul{
+                list-style-type: square;
+                margin-left: 4%;
+            }
+        }
     }
 }

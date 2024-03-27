@@ -19,10 +19,12 @@
 .scores{
     margin: 20px auto;
     width: 80%;
+    display: flex;
+    flex-direction: column;
     h2{
         position: relative;
         white-space: nowrap;
-        margin: 5% 0 5% -10%;
+        margin: 3% 0 3% -10%;
         Font-family: $fontTitle;
         font-size: $sizeTitle;
         color: $bleuCVB;
